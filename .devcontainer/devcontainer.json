@@ -1,0 +1,57 @@
+
+// This codespace contains R and a port for an Rstudio server in case 
+// that is the preferred IDE over VSCode.
+// R packages commonly used with SS3 are also installed (see install.r).
+{
+	"name": "R (rocker/tidyverse)",
+   	"image": "ghcr.io/rocker-org/devcontainer/tidyverse:4.4",
+
+	"features": {
+		"ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {},
+		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			"packages": "make,gcc,g++,libcurl4-openssl-dev,libv8-dev"
+		},
+		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
+			"packages": "languageserver,jsonlite,tidyverse",
+			"installSystemRequirements": true
+		}
+	},
+	"customizations": {
+	  "vscode": {
+		  "settings": {
+			"r.rterm.linux": "/usr/local/bin/radian",
+			"r.bracketedPaste": true,
+			"r.plot.useHttpgd": true,
+    		"r.lsp.diagnostics": false,
+    		"workbench.settings.applyToAllProfiles": [
+        	"r.lsp.diagnostics"
+    		],
+			"[r]": {
+			  "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?"
+			}
+		  },
+		  "extensions":[
+			"GitHub.codespaces",
+			"hbenl.vscode-test-explorer",
+			"reditorsupport.r",
+			"rdebugger.r-debugger",
+			"ms-vsliveshare.vsliveshare",
+			"mathematic.vscode-pdf",
+			"ms-vscode.live-server",
+			"mechatroner.rainbow-csv"
+		]
+	  }
+	},
+	  "forwardPorts": [8787],
+	  "portsAttributes": {
+		"8787": {
+			"label": "rstudio",
+			"requireLocalPort": true,
+			"onAutoForward": "ignore"
+		}
+	  },		  
+	  // Use 'postCreateCommand' to run commands after the container is created.
+	  "postCreateCommand": "Rscript .devcontainer/setup.r",
+	  "postAttachCommand": "sudo rstudio-server start",
+	  "remoteUser": "rstudio"
+}
