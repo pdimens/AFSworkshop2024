@@ -1,0 +1,45 @@
+artist_name,track_name,is_explicit,album_release_date,genres,danceability,valence,energy,loudness,acousticness,instrumentalness,liveness,speechiness,key,tempo,mode,duration_ms,time_signature,popularity
+Taylor Swift,Miss Americana & The Heartbreak Prince,FALSE,8/23/2019,pop,0.662,0.487,0.747,-6.926,0.028,0.00615,0.138,0.0736,B,150.088,0,234147,4,79
+Taylor Swift,Cruel Summer,FALSE,8/23/2019,pop,0.552,0.564,0.702,-5.707,0.117,2.06E-05,0.105,0.157,A,169.994,1,178427,4,94
+Taylor Swift,The Man,FALSE,8/23/2019,pop,0.777,0.633,0.658,-5.191,0.0767,0,0.0901,0.054,C,110.048,1,190360,4,82
+Taylor Swift,You Need To Calm Down,FALSE,8/23/2019,pop,0.771,0.714,0.671,-5.617,0.00929,0,0.0637,0.0553,D,85.026,1,171360,4,81
+Taylor Swift,Lover,FALSE,8/23/2019,pop,0.359,0.453,0.543,-7.582,0.492,1.58E-05,0.118,0.0919,G,68.534,1,221307,4,88
+Taylor Swift,Fearless (Taylor's Version),FALSE,4/9/2021,pop,0.569,0.43,0.741,-4.963,0.0122,0,0.333,0.0282,F,100.118,1,241592,4,79
+Taylor Swift,You Belong With Me (Taylor's Version),FALSE,4/9/2021,pop,0.632,0.474,0.773,-4.856,0.0623,0,0.0885,0.0346,F_sharp,130.033,1,231124,4,82
+Taylor Swift,Love Story (Taylor's Version),FALSE,4/9/2021,pop,0.627,0.415,0.792,-4.311,0.13,3.97E-06,0.0845,0.031,D,119.054,1,235767,4,80
+Taylor Swift,22 (Taylor's Version),FALSE,11/12/2021,pop,0.642,0.642,0.695,-5.62,0.000443,1.02E-05,0.0753,0.0281,G,103.984,1,230960,4,76
+Taylor Swift,We Are Never Ever Getting Back Together (Taylor's Version),FALSE,11/12/2021,pop,0.567,0.716,0.686,-6.139,0.0317,1.86E-06,0.0732,0.175,G,172.014,1,193147,4,76
+Taylor Swift,I Knew You Were Trouble (Taylor's Version),FALSE,11/12/2021,pop,0.584,0.767,0.557,-6.371,0.0129,0,0.0576,0.0342,F_sharp,154.008,1,219760,4,76
+Taylor Swift,All Too Well (10 Minute Version) (Taylor's Version) (From The Vault),TRUE,11/12/2021,pop,0.631,0.205,0.518,-8.771,0.274,0,0.088,0.0303,C,93.023,1,613027,4,81
+Taylor Swift,Enchanted (Taylor's Version),FALSE,7/7/2023,pop,0.52,0.227,0.553,-3.546,0.016,0,0.165,0.0269,G_sharp,81.949,1,353253,4,81
+Taylor Swift,...Ready For It?,FALSE,11/10/2017,pop,0.613,0.417,0.764,-6.509,0.0527,0,0.197,0.136,D,160.015,1,208187,4,82
+Taylor Swift,Delicate,FALSE,11/10/2017,pop,0.75,0.0499,0.404,-10.178,0.216,0.000357,0.0911,0.0682,A,95.045,0,232253,4,82
+Taylor Swift,Don't Blame Me,FALSE,11/10/2017,pop,0.615,0.193,0.534,-6.719,0.106,1.76E-05,0.0607,0.0386,A,135.917,0,236413,4,86
+Taylor Swift,Look What You Made Me Do,FALSE,11/10/2017,pop,0.766,0.506,0.709,-6.471,0.204,1.41E-05,0.126,0.123,A,128.07,0,211853,4,82
+Taylor Swift,cardigan,FALSE,7/24/2020,pop,0.613,0.551,0.581,-8.588,0.537,0.000345,0.25,0.0424,C,130.033,0,239560,4,86
+Taylor Swift,betty,TRUE,7/24/2020,pop,0.593,0.502,0.377,-8.761,0.6,0,0.0976,0.0253,C,95.939,1,294521,4,73
+Taylor Swift,champagne problems,TRUE,12/11/2020,pop,0.462,0.32,0.24,-12.077,0.92,0,0.113,0.0377,C,171.319,1,244000,4,78
+Taylor Swift,august,FALSE,7/24/2020,pop,0.532,0.403,0.623,-9.208,0.538,7.28E-05,0.0925,0.0331,F,89.937,1,261923,4,86
+Taylor Swift,illicit affairs,FALSE,7/24/2020,pop,0.559,0.46,0.31,-10.445,0.881,0,0.106,0.0338,A_sharp,119.845,1,190898,4,78
+Taylor Swift,my tears ricochet,FALSE,7/24/2020,pop,0.469,0.112,0.263,-10.63,0.806,0,0.0749,0.0329,C,129.86,1,255894,4,78
+Taylor Swift,marjorie,FALSE,12/11/2020,pop,0.535,0.287,0.561,-11.609,0.876,0.000136,0.115,0.0484,F,96.103,1,257773,4,70
+Taylor Swift,willow,FALSE,12/11/2020,pop,0.392,0.529,0.574,-9.195,0.833,0.00179,0.145,0.17,G,81.112,1,214707,4,79
+Taylor Swift,Style (Taylor's Version),FALSE,10/26/2023,pop,0.514,0.298,0.821,-4.803,0.000456,0.0232,0.0946,0.0444,G,94.884,1,231000,4,80
+Taylor Swift,Blank Space (Taylor's Version),FALSE,10/26/2023,pop,0.732,0.71,0.719,-5.469,0.0901,0,0.331,0.0645,C,96.035,1,231833,4,79
+Taylor Swift,Shake It Off (Taylor's Version),FALSE,10/26/2023,pop,0.632,0.903,0.805,-5.707,0.0112,2.51E-05,0.156,0.069,G,160.052,1,219209,4,76
+Taylor Swift,Wildest Dreams (Taylor's Version),FALSE,10/26/2023,pop,0.587,0.539,0.663,-7.439,0.0348,9.95E-05,0.0971,0.0598,G_sharp,139.993,1,220433,4,78
+Taylor Swift,Bad Blood (Taylor's Version),FALSE,10/26/2023,pop,0.624,0.347,0.711,-6.347,0.0369,3.13E-06,0.19,0.159,G,169.999,1,211104,4,72
+Taylor Swift,But Daddy I Love Him,TRUE,4/19/2024,pop,0.521,0.438,0.72,-7.684,0.384,0,0.135,0.104,E,79.943,1,340428,4,84
+Taylor Swift,So High School,FALSE,4/19/2024,pop,0.366,0.293,0.866,-4.514,0.0274,3.07E-06,0.106,0.0466,G,176.07,1,228800,4,88
+Taylor Swift,Who's Afraid of Little Old Me?,FALSE,4/19/2024,pop,0.606,0.238,0.338,-10.555,0.315,0,0.106,0.048,C,119.88,1,334085,4,90
+Taylor Swift,Down Bad,TRUE,4/19/2024,pop,0.541,0.168,0.366,-10.412,0.56,1.00E-06,0.0946,0.0748,B,159.707,1,261228,4,88
+Taylor Swift,Fortnight (feat. Post Malone),FALSE,4/19/2024,pop,0.504,0.281,0.386,-10.976,0.502,1.53E-05,0.0961,0.0308,B,192.004,1,228965,4,95
+Taylor Swift,The Smallest Man Who Ever Lived,TRUE,4/19/2024,pop,0.426,0.263,0.41,-9.083,0.52,0,0.338,0.0581,A_sharp,142.377,1,245542,1,89
+Taylor Swift,I Can Do It With a Broken Heart,TRUE,4/19/2024,pop,0.701,0.22,0.751,-8.39,0.123,0,0.15,0.0502,C,129.994,1,218005,4,90
+Taylor Swift,Lavender Haze,TRUE,10/21/2022,pop,0.735,0.0955,0.449,-10.56,0.23,0.00126,0.132,0.0883,G,97.05,0,202396,4,78
+Taylor Swift,Anti-Hero,FALSE,10/21/2022,pop,0.633,0.49,0.648,-6.645,0.121,2.62E-06,0.161,0.062,E,96.888,1,200690,4,87
+Taylor Swift,Midnight Rain,FALSE,10/21/2022,pop,0.604,0.203,0.375,-11.637,0.71,5.87E-05,0.116,0.0633,C,137.651,1,174783,4,79
+Taylor Swift,Vigilante Shit,TRUE,10/21/2022,pop,0.872,0.168,0.267,-10.764,0.166,2.18E-05,0.123,0.387,E,79.964,0,164801,4,75
+Taylor Swift,Bejeweled,FALSE,10/21/2022,pop,0.687,0.443,0.551,-9.202,0.0593,0.000143,0.09,0.0787,G,163.994,1,194166,4,78
+Taylor Swift,Mastermind,FALSE,10/21/2022,pop,0.66,0.137,0.343,-14.132,0.565,0.00134,0.0922,0.14,E,125.96,1,191039,4,72
+Taylor Swift,Karma,TRUE,10/21/2022,pop,0.64,0.121,0.619,-7.108,0.062,0,0.475,0.065,G_sharp,90.008,1,204852,4,82
