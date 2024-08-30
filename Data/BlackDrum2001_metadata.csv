@@ -1,0 +1,10 @@
+attribute,description
+year,year of capture (all 2001)
+agid,unique identification number
+spname,"species name (all ""Black Drum"")"
+month,month of capture
+day,day of capture
+weight,weight (lbs)
+tl,total length (mm)
+sex,"sex, (female, male, and unknown)"
+otoage,"age (yrs, from otoliths)"
