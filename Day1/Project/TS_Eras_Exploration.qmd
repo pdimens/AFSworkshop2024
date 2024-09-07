@@ -1,0 +1,51 @@
+---
+title: "Taylor Swift Eras Tour Set List"
+format: html
+---
+
+
+```{r}
+library(tidyverse)
+ts <- read.csv(file.path(getwd(), "Data", "TS_Eras_Tour_Setlist.csv"))
+head(ts)
+```
+
+
+## Goal: Create some plots to commmunicate what contributes to the popularity of songs in the setlist
+
+### Start here
+
+Start by plotting the popularity by track name, grouped by album release date. Here is some code to get you started: 
+
+```{r}
+
+ts %>% 
+ggplot(aes(x = reorder(track_name, -popularity), y = popularity)) + 
+geom_col() +  
+facet_wrap(~album_release_date) +
+theme(axis.text.x = element_text(angle = 30, hjust = 0.5, vjust = 0.5))  
+
+```
+
+Can you improve this plot? 
+
+```{r}
+## Insert code here to improve plot above
+```
+
+Now add your own code below to explore what attributes contribute to a song's popularity. 
+
+
+```{r}
+## Add plot
+```
+
+
+```{r}
+## Add plot 
+```
+
+
+```{r}
+## Add plot
+```

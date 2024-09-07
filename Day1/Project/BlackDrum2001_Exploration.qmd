@@ -1,0 +1,46 @@
+---
+title: "Black Drum Biological Demographics"
+format: html
+---
+
+
+
+```{r}
+library(tidyverse)
+bd <- read.csv(file.path(getwd(), "Data", "BlackDrum2001.csv"))
+head(bd)
+```
+
+## Goal: Describe the demographics of the sampled Black Drum from Virginia in 2001
+
+### Start here
+
+Start by plotting the length and age, grouped by month. Here is some code to get you started:
+
+```{r}
+bd %>% 
+ggplot(aes(x = otoage, y = tl)) + geom_boxplot(aes(group = month))
+```
+
+Can you improve this plot? 
+
+```{r}
+## Insert code here to improve plot above
+```
+
+Now add your own code below to explore the biological demographics of the Black Drum sampled in 2001. 
+
+
+```{r}
+## Add plot
+```
+
+
+```{r}
+## Add plot 
+```
+
+
+```{r}
+## Add plot
+```
