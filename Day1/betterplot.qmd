@@ -1,0 +1,130 @@
+---
+title: "Better Benchmark"
+author: "Pavel Dimens"
+format: html
+editor: visual
+---
+
+```{r}
+library(ggplot2)
+```
+
+## Our original plot
+
+The original plot, taken from the KBeagle preprint (https://doi.org/10.1101/2022.10.22.513369) looks like this:
+
+![KBeagle benchmark figure](https://www.biorxiv.org/content/biorxiv/early/2022/10/24/2022.10.22.513369/F2.large.jpg?width=800&height=600&carousel=1){fig-align="center"}
+
+Our goal is to reduce the clutter, add color, and emphasize the differences between Beagle and KBeagle, which is the point of this figure all along.
+
+## Let's fudge some data
+
+The actual values aren't super important, so let's make up some approximate values
+
+```{r}
+benchmark <- data.frame(
+  accuracy = c(seq(0.7, 0.6, by = -0.03), seq(0.9, 0.8, by = -0.03)),
+  miss_rate = rep(c(0.05, 0.1, 0.15, 0.2),2),
+  software = rep(c("beagle", "kbeagle"), each = 4)
+)
+benchmark
+```
+
+## Let's make a basic plot to mimic the original
+
+```{r}
+ggplot(benchmark, aes(x = miss_rate, y = accuracy, fill = software)) +
+  geom_col(position = "dodge") +
+  theme_bw()
+```
+
+## What if points were better?
+
+We can let the differences between the software at each missing rate be obvious by one being higher than the other.
+
+```{r}
+ggplot(benchmark, aes(x = miss_rate, y = accuracy, color = software)) +
+  geom_point() +
+  theme_bw()
+```
+
+There's a few things we can do here:
+
+1.  bigger points
+2.  draw a pale line between the two points at a given missing rate
+3.  remove X axis grid lines
+4.  better axis labelling, add title
+5.  custom colors
+6.  also make the shape of the points different for the two software
+
+### bigger points and shape-by-software
+
+```{r}
+ggplot(benchmark, aes(x = miss_rate, y = accuracy, color = software, shape = software)) +
+  geom_point(size = 4) +
+  theme_bw()
+```
+
+### remove X gridlines, Y axis start at 0
+
+```{r}
+ggplot(benchmark, aes(x = miss_rate, y = accuracy, color = software, shape = software)) +
+  geom_point(size = 4) +
+  theme_bw() +
+  theme(
+    panel.grid = element_blank()
+  )
+```
+
+### draw a vertical line to show the difference between the two points
+
+```{r}
+ggplot(benchmark, aes(x = miss_rate, y = accuracy, color = software, shape = software)) +
+  geom_point(size = 4) +
+  geom_line(linetype = "longdash", color = "grey70", aes(group = miss_rate)) +
+  theme_bw() +
+  theme(
+    panel.grid = element_blank()
+  )
+```
+
+### modify colors to highlight kbeagle and fix labels
+
+```{r}
+ggplot(benchmark, aes(x = miss_rate, y = accuracy, color = software, shape = software)) +
+  geom_line(linetype = "longdash", color = "grey70", aes(group = miss_rate)) +
+  geom_point(size = 4) +
+  scale_color_manual(values = c("grey70", "#069460")) +
+  xlab("Missing Rate") +
+  ylab("Accuracy") +
+  labs(title = "Imputation Software Accuracy") +
+  theme_light() +
+  theme(
+    panel.grid = element_blank()
+  )
+```
+
+### Let's add more data to make facets
+
+```{r}
+benchmark2 <- rbind(benchmark, benchmark, benchmark, benchmark)
+benchmark2$category <- rep(c("A", "B", "C","D"), each = 8)
+benchmark2
+```
+
+```{r}
+ggplot(benchmark2, aes(x = miss_rate, y = accuracy, color = software, shape = software)) +
+  geom_line(linetype = "longdash", color = "grey70", aes(group = miss_rate)) +
+  geom_point(size = 4) +
+  facet_wrap(vars(category), nrow = 2, ncol = 2) +
+  scale_color_manual(values = c("grey70", "#069460")) +
+  xlab("Missing Rate") +
+  ylab("Accuracy") +
+  labs(title = "Imputation Software Accuracy") +
+  theme_light() +
+  theme(
+    panel.grid = element_blank(),
+    legend.position = "bottom"
+  )
+  
+```
