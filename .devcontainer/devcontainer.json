@@ -12,9 +12,10 @@
 			"packages": "make,gcc,g++,libcurl4-openssl-dev,libv8-dev"
 		},
 		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-			"packages": "languageserver,jsonlite,tidyverse",
+			"packages": "languageserver,jsonlite,tidyverse,knitr",
 			"installSystemRequirements": true
-		}
+		},
+		 "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
 	},
 	"customizations": {
 	  "vscode": {
