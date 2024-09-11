@@ -126,5 +126,86 @@ ggplot(benchmark2, aes(x = miss_rate, y = accuracy, color = software, shape = so
     panel.grid = element_blank(),
     legend.position = "bottom"
   )
-  
+```
+
+## A different approach
+
+What if we are only interested in the relative performance improvement? We can just calculate the difference in accuracy between beagle and kbeagle. Since we made up data for this exercise, it's a little boring, so let's randomize it for demonstration purposes.
+
+```{r}
+beagle <- benchmark[benchmark$software == "beagle",]
+kbeagle <- benchmark[benchmark$software == "kbeagle",]
+kbeagle$improvement <- kbeagle$accuracy - beagle$accuracy + runif(4, min = -0.3, max = 0.3)
+kbeagle
+```
+
+Now we're going to plot the relative improvement (or regression)
+
+```{r}
+ggplot(kbeagle, aes(x = miss_rate, y = improvement)) +
+  geom_col() +
+  theme_bw()
+```
+
+Let's flip the axis
+
+```{r}
+ggplot(kbeagle, aes(x = miss_rate, y = improvement)) +
+  geom_col() +
+  theme_bw() +
+  coord_flip()
+```
+
+The bars are chunky, let's swap them for lollipops
+
+```{r}
+ggplot(kbeagle, aes(x = miss_rate, y = improvement)) +
+  geom_point() +
+  geom_segment(aes(xend = miss_rate, y = 0, yend = improvement)) +
+  theme_bw() +
+  coord_flip()
+```
+
+We need the points bigger and the axis labels improved
+
+```{r}
+ggplot(kbeagle, aes(x = miss_rate, y = improvement)) +
+  geom_point(size = 4) +
+  geom_segment(aes(xend = miss_rate, y = 0, yend = improvement)) +
+  theme_light() +
+  ylab("Accuracy Performance vs Beagle") +
+  xlab("Missing Rate") +
+  coord_flip() +
+  theme(
+    panel.grid = element_blank()
+  )
+```
+
+Finally, let's color the lines based on whether they are an improvement (positive) or regression (negative) in performance
+
+```{r}
+ggplot(kbeagle, aes(x = miss_rate, y = improvement)) +
+  geom_point(
+    size = 4,
+    aes(colour = after_stat(ifelse(y > 0, "positve", "negative")))
+  ) +
+  geom_hline(yintercept = 0, color = "grey80", linetype = "dashed") +
+  geom_segment(
+    aes(
+      xend = miss_rate,
+      y = 0,
+      yend = improvement,
+      colour = after_stat(ifelse(yend > 0, "positve", "negative"))
+    )
+  ) +
+  scale_color_manual(values = c("indianred", "dodgerblue")) +
+  theme_light() +
+  ylab("Accuracy Performance vs Beagle") +
+  xlab("Missing Rate") +
+  coord_flip() +
+  theme(
+    panel.grid = element_blank(),
+    legend.position = "none"
+  )
+
 ```
