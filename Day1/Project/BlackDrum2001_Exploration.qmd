@@ -19,7 +19,7 @@ Start by plotting the length and age, grouped by month. Here is some code to get
 
 ```{r}
 bd %>% 
-ggplot(aes(x = otoage, y = tl)) + geom_boxplot(aes(group = month))
+ggplot(aes(x = otoage, y = tl)) + geom_boxplot(aes(group = otoage))
 ```
 
 Can you improve this plot? 
